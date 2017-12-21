@@ -1,12 +1,16 @@
 <template>
     <v-layout row wrap>
-        <v-flex xs12 md3 ma-5 sm8 v-for="data in list" :key="data.id" space-between>
+        <v-flex pt-5 xs12 md3 ma-5 sm8 v-for="data in list" :key="data.id" space-between>
             <v-card>
-                <template v-for="">
-                    <v-card-media src="" height="300px">
+                <template>
+                    <v-card-media src="https://d3e02gns9oqhhr.cloudfront.net/assets/expose_v2/578d1623ac92b204088b4568_variant_asset580e4605f1682_inventoryM.jpg" height="300px">
                         <v-layout column class="media">
-                            <v-card-title class="grey--text pl-5 pt-5">
-                                <div class="display-1 pl-5 pt-5">Ali Conners</div>
+                            <v-card-title class="grey--text pl-3 pt-3">
+                                <v-btn color="white">
+                                    <span v-for="location in data.realestateSummary" :key="location.id">
+                                        {{location.street}}
+                                    </span>
+                                </v-btn>
                             </v-card-title>
                         </v-layout>
                     </v-card-media>
@@ -14,7 +18,7 @@
                 <v-list two-line>
                     <v-list-tile>
                         <v-list-tile-action>
-                            <v-icon color="indigo">location_on</v-icon>
+                            <v-icon color="blue darken-2">location_on</v-icon>
                         </v-list-tile-action>
                         <v-list-tile-content>
                             <v-list-tile-title color="grey--text">
@@ -29,9 +33,12 @@
                     </v-list-tile>
                     <v-divider inset></v-divider>
                     <v-list-tile>
-                        <v-list-tile-action></v-list-tile-action>
+                        <v-list-tile-action>
+                            <v-icon color="blue darken-2">local_post_office</v-icon>
+                        </v-list-tile-action>
                         <v-list-tile-content>
-                            <span mt-2 v-for="location in data.realestateSummary" :key="location.id">
+                            <br>
+                            <span v-for="location in data.realestateSummary" :key="location.id">
                                 <v-list-tile-title>{{location.postalCode}}</v-list-tile-title>
                                 <v-list-tile-sub-title>{{location.street}}</v-list-tile-sub-title>
                             </span>
@@ -49,10 +56,12 @@
     export default {
         data() {
             return {
-                list: ''
+                list: '' //Initialising List variable
             };
         },
         methods: {
+            // Calling API to get data
+
             getlist() {
                 axios
                     .get('https://api.mcmakler.de/v1/advertisements')
@@ -63,8 +72,9 @@
                     });
             }
         },
+
         beforeMount() {
-            this.getlist();
+            this.getlist(); // Methods should be called before mounting the component
         }
     };
 </script>
