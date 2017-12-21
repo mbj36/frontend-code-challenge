@@ -42,3 +42,11 @@ npm run unit
 # run all tests
 npm test
 ```
+
+##ScreenShots
+
+This is Just a sample screenshot -
+
+---
+
+![alt text](./static/Screen Shot 2017-12-21 at 4.33.08 PM.png)
