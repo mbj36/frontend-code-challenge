@@ -2,9 +2,28 @@
 
 > Coding task for mcmakler
 
+## Task Description
+
+### Skills used -
+
+* VueJS - Front End Javascript Framework
+* Vuetify - Material Component Framework
+* axios - HTTP client for browser and node.js
+* ES6 and above
+
+## Approach
+
+I choose VueJS as a front end framework, Vue offers some of the boiler plate that makes easy to initiate the application and get going. As we all know, Vue is very performant, versatile and scalable framework
+
+Vuetify is a material component framework based on the material design, Choosing vuetify because of very supporting community. It has more than 8000 stars on Github and is very component framework
+
+Axios - Used for getting data from the Mcmakler API
+
+Vue-router for routing the application, although this task doesn't require any router, but i have tried to show the usage of router through component
+
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -23,5 +42,3 @@ npm run unit
 # run all tests
 npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
