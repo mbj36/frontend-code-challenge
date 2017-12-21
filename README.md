@@ -49,4 +49,4 @@ This is Just a sample screenshot -
 
 ---
 
-![alt text](./static/Screen Shot 2017-12-21 at 4.33.08 PM.png)
+![alt text](https://user-images.githubusercontent.com/9936881/34253681-aaf07d3a-e66e-11e7-80b9-cc6111d871ca.png)
