@@ -14,4 +14,7 @@
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
     }
+    a {
+        text-decoration: none;
+    }
 </style>

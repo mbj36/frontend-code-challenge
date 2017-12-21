@@ -1,6 +1,9 @@
 <template>
     <div>
         <header-component></header-component>
+        <br>
+        <br>
+        <br>
         <list-apartment></list-apartment>
     </div>
 </template>
